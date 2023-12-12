@@ -13,13 +13,13 @@ function App() {
       <header className="App-header">
            <Logo></Logo>
            <ul className='options'>
-            {textOptions.map((text)=>(
+            {textOptions.map(text=>(
               <li className='option'><p>{text}</p></li>
             ))}
             
            </ul>
            <ul className='icons'>
-              {icons.map((icon)=>(
+              {icons.map(icon=>(
                 <li className='icon'><img src={icon} alt='icon' /></li>
               ))}
           </ul>
