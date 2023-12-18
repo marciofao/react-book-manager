@@ -1,18 +1,26 @@
-import './style.css'
+
 
 import perfil from '../../img/perfil.svg'
 import sacola from '../../img/sacola.svg'
+import styled from 'styled-components'
 
+const Icon = styled.li`
+  margin-right: 20px;
+`
+const Icons = styled.ul`
+  display: flex;
+  align-items: center;
+`
 
 const icons = [perfil, sacola]
 
 function HeaderIcons(){
     return(
-        <ul className='icons'>
+        <Icons>
               {icons.map(icon=>(
-                <li className='icon'><img src={icon} alt='icon' /></li>
+                <Icon><img src={icon} alt='icon' /></Icon>
               ))}
-          </ul>
+          </Icons>
     )
 }
 export default HeaderIcons;
