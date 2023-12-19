@@ -1,6 +1,7 @@
 import Input from '../Input'
 import styled from 'styled-components';
 import { useState } from 'react';
+import { books } from './searchData'
 
 const SearchContainer = styled.section`
   backg-round-image: 90deg, #002F52 35%, #326589 165%) ;
@@ -16,7 +17,6 @@ const Title = styled.h1`
   text—align: center;
   width: 100%;
 `
-
 const Subtitle = styled.h2`
   font-size: 16px;
   font-weight: 500;
@@ -25,15 +25,19 @@ const Subtitle = styled.h2`
 
 
 function Pesquisa() {
-  const [typedText, setTypedText] = useState('');
+  const [bookSearch, setbookSearch] = useState([]);
+  console.log(bookSearch)
   return (
     <SearchContainer>
       <Title>Do you know how to start?</Title>
       <Subtitle>Find your book in our bookshelf.</Subtitle>
       <Input 
       placeholder="write your next reading" 
-      onBlur={e=> setTypedText(e.target.value)}/>
-      <p>{typedText}</p>
+      onBlur={e=> {
+         const typedText = e.target.value
+         const searchResult = books.filter(book=>book.name.toLowerCase().includes(typedText.toLowerCase()))
+         setbookSearch(searchResult)
+      }}/>
     </SearchContainer>
     
   );
