@@ -1,5 +1,6 @@
 import Input from '../Input'
 import styled from 'styled-components';
+import { useState } from 'react';
 
 const SearchContainer = styled.section`
   backg-round-image: 90deg, #002F52 35%, #326589 165%) ;
@@ -24,12 +25,17 @@ const Subtitle = styled.h2`
 
 
 function Pesquisa() {
+  const [typedText, setTypedText] = useState('');
   return (
     <SearchContainer>
       <Title>Do you know how to start?</Title>
       <Subtitle>Find your book in our bookshelf.</Subtitle>
-      <Input placeholder="write your next reading" />
+      <Input 
+      placeholder="write your next reading" 
+      onBlur={e=> setTypedText(e.target.value)}/>
+      <p>{typedText}</p>
     </SearchContainer>
+    
   );
 }
 
