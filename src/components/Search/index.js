@@ -7,7 +7,7 @@ const SearchContainer = styled.section`
   background-image: 90deg, #002F52 35%, #326589 165%) ;
   color: #FFF;
   text-align: center;
-  padding: 85px O;
+  padding: 85px 0px;
   height: auto;
   width: 100%;
 `
@@ -28,22 +28,28 @@ const Results = styled.div`
   align-items: center;
   margin-bottom: 12px;
   cursor: pointer;
-  flex-direction: row-reverse;
-  p{
-    width: 200px
-  }
-  img {
+  flex-wrap: wrap;
+  box-sizing: border-box;
+`
+const BookItem = styled.div`
+display: flex;
+flex-direction: row-reverse;
+box-sizing: border-box;
+p{
+  width: 200px;
+}
+img {
   width: 100px;
-  }
-  &:hover {
-    border: 1px solid white;
-  }
+}
+&:hover {
+  border: 1px solid white;
+}
 `
 
 
 function Pesquisa() {
-  const [BookSearch, setBookSearch] = useState([]);
-  console.log(BookSearch)
+  const [BookSearch, setBookSearch] = useState(books);
+  //console.log(BookSearch)
   return (
     <SearchContainer>
       <Title>Do you know how to start?</Title>
@@ -55,12 +61,16 @@ function Pesquisa() {
           const searchResult = books.filter(book => book.name.toLowerCase().includes(typedText.toLowerCase()))
           setBookSearch(searchResult)
         }} />
-        {BookSearch.map(book => (
+        
         <Results>
+        {BookSearch.map(book => (
+          <BookItem>
           <p>{book.name}</p>
           <img src={book.src} alt=""/>
+          </BookItem>
+          ))}
         </Results>
-      ))}
+      
     </SearchContainer>
     
     );

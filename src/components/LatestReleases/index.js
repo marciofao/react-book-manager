@@ -1,6 +1,8 @@
 import { books } from './latestReleasesData'
 import { Title } from '../Title'
+import bookImg from '../../img/livro2.png'
 import styled from 'styled-components'
+import ReccommendCard from '../RecommendCard'
 
 const LatestReleasesContainter = styled.section`
     background-color: #EBECEE;
@@ -25,12 +27,20 @@ function LatestReleases() {
                 color="green"
                 fontSize="35px"
                 align="center"
-            >Latest Releases</Title>
+            >
+                Latest Releases
+            </Title>
             <NewBooksContainer>
                 {books.map(book => (
                     <img src={book.src} alt="" />
                 ))}
             </NewBooksContainer>
+            <ReccommendCard
+                title="Maybe you also like"
+                subtitle="Angular"
+                description="Learn Everythign about Javascript"
+                img={bookImg}
+            />
         </LatestReleasesContainter>
     )
 }
