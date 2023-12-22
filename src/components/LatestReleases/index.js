@@ -21,10 +21,14 @@ const NewBooksContainer = styled.div`
 function LatestReleases() {
     return (
         <LatestReleasesContainter>
-            <Title>Latest Releases</Title>
+            <Title
+                color="green"
+                fontSize="35px"
+                align="center"
+            >Latest Releases</Title>
             <NewBooksContainer>
                 {books.map(book => (
-                    <img src={book.src} alt=""/>
+                    <img src={book.src} alt="" />
                 ))}
             </NewBooksContainer>
         </LatestReleasesContainter>
