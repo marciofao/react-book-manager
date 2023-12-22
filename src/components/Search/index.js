@@ -4,11 +4,11 @@ import { useState } from 'react';
 import { books } from './searchData'
 
 const SearchContainer = styled.section`
-  backg-round-image: 90deg, #002F52 35%, #326589 165%) ;
+  background-image: 90deg, #002F52 35%, #326589 165%) ;
   color: #FFF;
   text-align: center;
   padding: 85px O;
-  height: 270px;
+  height: auto;
   width: 100%;
 `
 const Title = styled.h1`
