@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.js": "/react-node-book-manager/static/js/main.32521daa.js",
+    "static/js/787.bb1ee9c0.chunk.js": "/react-node-book-manager/static/js/787.bb1ee9c0.chunk.js",
+    "static/media/livro.png": "/react-node-book-manager/static/media/livro.08cebf2371097b2d91cd.png",
+    "static/media/logo.svg": "/react-node-book-manager/static/media/logo.f8980f809c26261233e1f48a9267d3c7.svg",
+    "static/media/sacola.svg": "/react-node-book-manager/static/media/sacola.ac1da0f0258a2f40b3c2f187b44b7f05.svg",
+    "static/media/perfil.svg": "/react-node-book-manager/static/media/perfil.0fa924868f8eb5b72019b18dcc377bf8.svg",
+    "index.html": "/react-node-book-manager/index.html",
+    "main.32521daa.js.map": "/react-node-book-manager/static/js/main.32521daa.js.map",
+    "787.bb1ee9c0.chunk.js.map": "/react-node-book-manager/static/js/787.bb1ee9c0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.32521daa.js"
+  ]
+}
