@@ -22,25 +22,48 @@ const Subtitle = styled.h2`
   font-weight: 500;
   margin-bottom: 40px;
 `
+const Results = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 12px;
+  cursor: pointer;
+  flex-direction: row-reverse;
+  p{
+    width: 200px
+  }
+  img {
+  width: 100px;
+  }
+  &:hover {
+    border: 1px solid white;
+  }
+`
 
 
 function Pesquisa() {
-  const [bookSearch, setbookSearch] = useState([]);
-  console.log(bookSearch)
+  const [BookSearch, setBookSearch] = useState([]);
+  console.log(BookSearch)
   return (
     <SearchContainer>
       <Title>Do you know how to start?</Title>
       <Subtitle>Find your book in our bookshelf.</Subtitle>
-      <Input 
-      placeholder="write your next reading" 
-      onBlur={e=> {
-         const typedText = e.target.value
-         const searchResult = books.filter(book=>book.name.toLowerCase().includes(typedText.toLowerCase()))
-         setbookSearch(searchResult)
-      }}/>
+      <Input
+        placeholder="write your next reading"
+        onKeyUp={e => {
+          const typedText = e.target.value
+          const searchResult = books.filter(book => book.name.toLowerCase().includes(typedText.toLowerCase()))
+          setBookSearch(searchResult)
+        }} />
+        {BookSearch.map(book => (
+        <Results>
+          <p>{book.name}</p>
+          <img src={book.src} alt=""/>
+        </Results>
+      ))}
     </SearchContainer>
     
-  );
+    );
 }
 
 export default Pesquisa;
