@@ -15,7 +15,7 @@ const Option = styled.li`
 `
 
 
-const textOptions = ['Categorias', 'Minha estante', 'Favoritos']
+const textOptions = ['Categories', 'My bookshelf', 'Favourites']
 
 
 function HeaderOptions(){
