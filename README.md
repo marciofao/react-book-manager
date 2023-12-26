@@ -1,6 +1,6 @@
 # Fullstack Book Management System
 
-Live Demo: [visit](https://marciofao.github.io/react-node-book-manager/)
+Live Demo: [visit](https://marciofao.github.io/react-book-manager/)
 
 ## Current Features:
 - List filtering on Landing page
