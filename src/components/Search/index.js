@@ -10,6 +10,9 @@ const SearchContainer = styled.section`
   padding: 85px 0px;
   height: auto;
   width: 100%;
+  input{
+    width: 100%;
+  }
 `
 const Title = styled.h1`
   color: #FFF;
@@ -55,7 +58,7 @@ function Pesquisa() {
       <Title>Do you know how to start?</Title>
       <Subtitle>Find your book in our bookshelf.</Subtitle>
       <Input
-        placeholder="write your next reading"
+        placeholder="Type to filter the books below"
         onKeyUp={e => {
           const typedText = e.target.value
           const searchResult = books.filter(book => book.name.toLowerCase().includes(typedText.toLowerCase()))
