@@ -16,3 +16,4 @@
 
 ## Production Deployment:
 - Run `npm run deploy` see [react-gh-pages](https://github.com/gitname/react-gh-pages)
+- or run `npm run build` for local build
