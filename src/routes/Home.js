@@ -1,8 +1,8 @@
 
 
-import Header from './components/Header/'
-import Search from './components/Search'
-import LatestReleases from './components/LatestReleases'
+import Header from '../components/Header'
+import Search from '../components/Search'
+import LatestReleases from '../components/LatestReleases'
 import styled from 'styled-components'
 
 const AppContainer = styled.div`
@@ -14,14 +14,13 @@ const AppContainer = styled.div`
    /* overflow: auto; */
 `
 
-function App() {
+function Home() {
   return (
     <AppContainer>
-      <Header/>
       <Search/>
       <LatestReleases/>
     </AppContainer>
   )
 }
 
-export default App
+export default Home
