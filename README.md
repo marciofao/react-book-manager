@@ -7,6 +7,7 @@
 - List filtering on Landing page
 - Uses Styled components
 - Higly componentized layout parts
+- React Routes
 - API data retrieve (in development)
 
 ## How to setup Dev environment:
